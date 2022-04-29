@@ -7,12 +7,9 @@ RUN apk add --update \
         icu-dev \
         build-base \
         libzip-dev \
-        libssh2\
     && docker-php-ext-install opcache \
     && docker-php-ext-install zip \
-    && pecl install ssh2-1.3.1 \
     && docker-php-ext-install pdo_mysql \
-    && docker-php-ext-enable ssh2 \
     && docker-php-ext-install intl \
     && rm -rf /tmp/* /var/cache/apk/*
 
